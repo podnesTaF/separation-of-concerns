@@ -66,6 +66,30 @@
           document.getElementById('expected'),
         );
         mocha.run();
+
+        const wrapper = document.getElementById('actual')
+        const title = document.createElement('h1')
+        
+        title.innerText= 'a list of things'
+        const ulEl = document.createElement('ul')
+        const liItems = ['robots', 'solar systems', 'learn about badgers', 'oil']
+        for (let i = 0; i < 4; i++) {
+          if(i === 2) {
+            const liEl = document.createElement('li')
+            const aEl = document.createElement('a')
+            aEl.setAttribute('href', 'https://www.badgerbadgerbadger.com/')
+            aEl.innerText = liItems[i]
+            liEl.appendChild(aEl)
+            ulEl.appendChild(liEl)
+          } else {
+            const liEl = document.createElement('li')
+            liEl.innerText = liItems[i]
+            ulEl.appendChild(liEl)
+          }
+        }
+
+        wrapper.appendChild(title)
+        wrapper.appendChild(ulEl)
       </script>
     </section>
   </body>

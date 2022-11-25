@@ -67,6 +67,13 @@
           document.getElementById('expected'),
         );
         mocha.run();
+        const listWrap = document.getElementById('actual')
+        const ulEl = document.querySelector('#actual ul')
+        const title = document.createElement('h1')
+        title.innerText = 'a list of things'
+        listWrap.appendChild(title)
+        listWrap.appendChild(ulEl)
+        document.querySelectorAll('#actual ul li')[1].innerText = 'solar systems'
       </script>
     </section>
   </body>

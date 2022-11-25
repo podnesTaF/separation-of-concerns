@@ -63,6 +63,11 @@
           document.getElementById('expected'),
         );
         mocha.run();
+        const actual = document.getElementById('actual')
+        const a = document.createElement('a')
+        a.setAttribute('href', 'https://www.youtube.com/watch?v=0ik6X4DJKCc')
+        a.innerText = 'Mr. Traversy does it again!'
+        actual.appendChild(a)
       </script>
     </section>
   </body>
